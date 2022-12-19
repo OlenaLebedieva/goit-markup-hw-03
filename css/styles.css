@@ -1,11 +1,28 @@
-/*  */
+/* css changes */
 :root {
 --primary-text-color: rgba(67, 68, 85, 1);
 --title-text-color: rgba(46, 47, 66, 1);
 --accent-text-color: rgba(231, 233, 252, 1);
 --brand-text-color: rgba(77, 90, 229, 1);
---accent-section-color: rgba(244, 244, 253, 1)
+--accent-section-color: rgba(244, 244, 253, 1);
 }
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1158px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    outline: 1px solid red;
+}
+
 .body {
     background: rgb(255, 255, 255);
     color: rgba(67, 68, 85, 1);
@@ -23,6 +40,12 @@ text-decoration: none;
 /* назвати секції і їх тійтли, дати їм загальний стиль кольору */
 
 /* HEADER */
+
+.header {
+padding-top: 24px;
+padding-bottom: 24px;
+}
+
 .logo {
 color: var(--title-text-color);
 font-family: 'Raleway', sans-serif;
@@ -65,19 +88,28 @@ color: var(--brand-text-color);
 /* MAIN */
 
 /* Hero Section */
-.section-hero {
+/* виправити кордони */
+.hero {
 background-color: var(--title-text-color);
+padding: 192px 0;
 }
+
 .hero-title {
     color: rgb(255, 255, 255);
     font-weight: 600;
     font-size: 56px;
     line-height: 1.07;
     text-align: center;
+    max-width: 492px;
+    display: block;
+    margin: auto;
+    padding-bottom: 48px;
 }
 
 .hero-button {
     color: var(--accent-text-color);
+    width: 170px;
+    height: 51px;
     font-family: inherit;
     font-weight: 600;
     font-size: 16px;
@@ -85,9 +117,12 @@ background-color: var(--title-text-color);
     align-items: center;
     letter-spacing: 0.04em;
     background-color:var(--brand-text-color);
+    border-color: var(--brand-text-color);
     cursor: pointer;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 border-radius: 4px;
+display: block;
+margin: auto;
 }
 
 .hero-button:hover,
@@ -101,8 +136,16 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
 
 
 /* Benefit Section */
+.section-benefit{
+    padding: 120px 0;
+}
+
 .title-benefit {
 display: none;
+}
+
+.benefit-list {
+     max-width: 264px;
 }
 
 .benefit-list .title {
@@ -110,6 +153,7 @@ display: none;
     font-weight: 600;
     font-size: 20px;
     line-height: 1.2px;
+    padding-bottom: 8px;
 }
 
 .benefit-list .text {
@@ -117,7 +161,8 @@ display: none;
     line-height: 1.5;
 }
 /* WWD Section  */
-.title-wwd
+
+.title-wwd,
 .title-team {
     color: var(--title-text-color);
     font-weight: 600;
@@ -125,10 +170,14 @@ display: none;
     line-height: 1.11;
 text-align: center;
 text-transform: capitalize;
+padding-bottom: 72px;
 }
+
 /* Team Section */
 .section-team {
     background-color: var(--accent-section-color);
+    padding: 120px 0;
+
 }
 .team-list .title {
     color: var(--title-text-color);
@@ -136,23 +185,31 @@ text-transform: capitalize;
     font-size: 20px;
     line-height: 1.2;
 text-align: center;
+padding-top: 32px;
+padding-bottom: 8px;
 }
 
 .team-list .text {
     font-size: 16px;
     line-height: 1.5;
     text-align: center;
+    padding-bottom: 32px;
 }
 
 /* Footer */
 .footer-section {
     background-color: var(--title-text-color);
+    padding: 100px 0;
+
 }
 
 .footer-text {
     color: var(--accent-text-color);
     font-size: 16px;
 line-height: 1.5;
+max-width: 264px;
+padding-top: 16px;
+
 }
 
 .footer-section .logo {
@@ -169,7 +226,9 @@ color: var(--brand-text-color)
 }
 
 /* PORTFOLIO */
-
+.portfolio-section {
+    padding: 96px 0 120px;
+}
 .portfolio-title,
 .filters-title {
     display: none;
@@ -207,10 +266,13 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
     font-weight: 600;
     font-size: 20px;
     line-height: 1.2;
+    padding-top: 32px;
+    padding-bottom: 8px;
 }
 
 .progect-link .text {
     color: var(--primary-text-color);
     font-size: 16px;
     line-height: 1.2;
+    padding-bottom: 32px;
 }
