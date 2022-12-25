@@ -1,278 +1,366 @@
 /* css changes */
 :root {
---primary-text-color: rgba(67, 68, 85, 1);
---title-text-color: rgba(46, 47, 66, 1);
---accent-text-color: rgba(231, 233, 252, 1);
---brand-text-color: rgba(77, 90, 229, 1);
---accent-section-color: rgba(244, 244, 253, 1);
+  --primary-text-color: rgba(67, 68, 85, 1);
+  --title-text-color: rgba(46, 47, 66, 1);
+  --accent-text-color: rgba(231, 233, 252, 1);
+  --brand-text-color: rgba(77, 90, 229, 1);
+  --accent-section-color: rgba(244, 244, 253, 1);
+}
+/* ==Скидання стилів== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-*,
-*::after,
-*::before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ==General box-container for all section== */
 .container {
-    max-width: 1158px;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    outline: 1px solid red;
+  max-width: 1158px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .body {
-    background: rgb(255, 255, 255);
-    color: rgba(67, 68, 85, 1);
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 0.02em;
+  background: rgb(255, 255, 255);
+  color: var(--primary-text-color);
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.02em;
+
 }
 
 .list {
-    list-style: none;
+  list-style: none;
 }
 
 .link {
-text-decoration: none;
+  text-decoration: none;
 }
-/* назвати секції і їх тійтли, дати їм загальний стиль кольору */
 
-/* HEADER */
+/* ==HEADER== */
 
 .header {
-padding-top: 24px;
-padding-bottom: 24px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.header-section {
+  display: flex;
+  align-items: center;
+}
+
+.nav-section {
+  display: flex;
+  align-items: center;
+}
+
+/* ==Логотип== */
 .logo {
-color: var(--title-text-color);
-font-family: 'Raleway', sans-serif;
-font-weight: 800;
-font-size: 18px;
-line-height: 1.33;
-letter-spacing: 0.03em;
+  color: var(--title-text-color);
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: 0.03em;
+  margin-right: 156px;
 }
 
 .accent-logo {
-color: var(--brand-text-color)
+  color: var(--brand-text-color);
 }
 
 .accent-logo:active {
-    color: var(--brand-text-color);
+  color: var(--brand-text-color);
 }
 
-.link-nav {
-    color: var(--title-text-color);
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 1.5;
+.site-nav {
+    display: flex;
 }
-.link-nav:hover, 
+
+/* ==Навігація по сторінкам */
+.link-nav {
+  color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.link-nav:hover,
 .link-nav:focus {
-    color: var(--primary-text-color);
+  color: var(--primary-text-color);
+}
+
+.site-nav, 
+.link-nav {
+margin-right: 40px;
+}
+
+/* ==Навігація по контактам== */
+
+.contact-nav {
+    display: flex;
+    margin-left: auto;
 }
 
 .link-contact {
-    color: var(--primary-text-color);
-    font-size: 16px;
-    line-height: 1.5;
+  color: var(--primary-text-color);
+  font-size: 16px;
+  line-height: 1.5;
+  margin-left: 40px;
 }
+
 
 .link-contact:hover,
-.link-contact:focus {
-color: var(--brand-text-color);
+.link-contact:focus,
+.current {
+  color: var(--brand-text-color);
 }
 
-/* MAIN */
+/* ===MAIN=== */
 
-/* Hero Section */
-/* виправити кордони */
+/* ==Hero Section== */
 .hero {
-background-color: var(--title-text-color);
-padding: 192px 0;
+  background-color: var(--title-text-color);
+  padding-top: 192px;
+  padding-bottom: 292px;
+  text-align: center;
 }
 
 .hero-title {
-    color: rgb(255, 255, 255);
-    font-weight: 600;
-    font-size: 56px;
-    line-height: 1.07;
-    text-align: center;
-    max-width: 492px;
-    display: block;
-    margin: auto;
-    padding-bottom: 48px;
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 1.07;
+  max-width: 492px;
+  display: block;
+  margin: auto;
+  margin-bottom: 48px;
 }
 
 .hero-button {
-    color: var(--accent-text-color);
-    width: 170px;
-    height: 51px;
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 1.19;
-    align-items: center;
-    letter-spacing: 0.04em;
-    background-color:var(--brand-text-color);
-    border-color: var(--brand-text-color);
-    cursor: pointer;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-border-radius: 4px;
-display: block;
-margin: auto;
+  color: var(--accent-text-color);
+  min-width: 170px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.19;
+  align-items: center;
+  letter-spacing: 0.04em;
+  background-color: var(--brand-text-color);
+  border-color: var(--brand-text-color);
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 16px 32px;
 }
 
 .hero-button:hover,
 .hero-button:focus {
-   color: var(--accent-text-color);
-background-color: #4D5AE5;
-box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
-0px 1px 1px rgba(46, 47, 66, 0.16), 
-0px 2px 1px rgba(46, 47, 66, 0.08);
+  color: var(--accent-text-color);
+  background-color: #4d5ae5;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
+/* ==Benefit Section== */
 
-/* Benefit Section */
-.section-benefit{
-    padding: 120px 0;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/* ==Для всіх секцій== */
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
-.title-benefit {
-display: none;
+.benefit-section {
+  padding-top: 120px;
 }
 
 .benefit-list {
-     max-width: 264px;
+  display: flex;
+  margin-left: -24px;
+}
+
+.benefit-list > .benefit-item {
+  flex-basis: calc(100%/4 - 24px);
+  margin-left: 24px;
 }
 
 .benefit-list .title {
-    color: var(--title-text-color);
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 1.2px;
-    padding-bottom: 8px;
+  color: var(--title-text-color);
+  font-size: 20px;
+  line-height: 1.2;
+margin-bottom: 8px;
 }
 
 .benefit-list .text {
-    font-size: 16px;
-    line-height: 1.5;
+  font-size: 16px;
+  line-height: 1.5;
 }
-/* WWD Section  */
+
+/* ==WWD Section== */
 
 .title-wwd,
 .title-team {
-    color: var(--title-text-color);
-    font-weight: 600;
-    font-size: 36px;
-    line-height: 1.11;
-text-align: center;
-text-transform: capitalize;
-padding-bottom: 72px;
+  color: var(--title-text-color);
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  text-transform: capitalize;
+  padding-bottom: 72px;
+}
+.wwd-list {
+  display: flex;
+  margin-left: -24px;
+}
+
+.wwd-item {
+margin-left: 24px;
 }
 
 /* Team Section */
 .section-team {
-    background-color: var(--accent-section-color);
-    padding: 120px 0;
+  background-color: var(--accent-section-color);
+}
 
+.team-list {
+  display: flex;
+  margin-left: -24px;
 }
+
+.team-item {
+  margin-left: 24px;
+  flex-basis: calc(100%/4 - 24px);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-description {
+  background-color: rgb(255, 255, 255);
+}
+
 .team-list .title {
-    color: var(--title-text-color);
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 1.2;
-text-align: center;
-padding-top: 32px;
-padding-bottom: 8px;
+  color: var(--title-text-color);
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  padding-top: 32px;
+  padding-bottom: 8px;
 }
+
 
 .team-list .text {
-    font-size: 16px;
-    line-height: 1.5;
-    text-align: center;
-    padding-bottom: 32px;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  padding-bottom: 32px;
 }
 
 /* Footer */
 .footer-section {
-    background-color: var(--title-text-color);
-    padding: 100px 0;
-
+  background-color: var(--title-text-color);
+  padding: 100px 0;
 }
 
 .footer-text {
-    color: var(--accent-text-color);
-    font-size: 16px;
-line-height: 1.5;
-max-width: 264px;
-padding-top: 16px;
-
+  color: var(--accent-text-color);
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 264px;
+  padding-top: 16px;
 }
 
 .footer-section .logo {
-color: var(--accent-section-color);
-font-family: 'Raleway', sans-serif;
-font-weight: 800;
-font-size: 18px;
-line-height: 1.33;
-letter-spacing: 0.03em;
+  color: var(--accent-section-color);
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: 0.03em;
 }
 
 .accent-logo {
-color: var(--brand-text-color)
+  color: var(--brand-text-color);
 }
 
 /* PORTFOLIO */
 .portfolio-section {
-    padding: 96px 0 120px;
+  padding: 96px 0 120px;
 }
 .portfolio-title,
 .filters-title {
-    display: none;
+  display: none;
 }
 
 .filters-title {
-    display: none;
+  display: none;
 }
 
 .filters-list .button {
-    color: var(--brand-text-color);
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 1.19;
-    letter-spacing: 0.04em;
-    background-color:var(--accent-text-color);
-    cursor: pointer; 
-    border-radius: 4px;
-    border-color: var(--accent-text-color);
+  color: var(--brand-text-color);
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.04em;
+  background-color: var(--accent-text-color);
+  cursor: pointer;
+  border-radius: 4px;
+  border-color: var(--accent-text-color);
 }
 
 .filters-list .button:hover,
 .filters-list .button:focus {
   color: var(--accent-text-color);
-    background-color: var(--brand-text-color);
-    border-color: var(--brand-text-color);
-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
-0px 2px 1px rgba(0, 0, 0, 0.08), 
-0px 2px 2px rgba(0, 0, 0, 0.12);
+  background-color: var(--brand-text-color);
+  border-color: var(--brand-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .progect-list .title {
-    color: var(--title-text-color);
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 1.2;
-    padding-top: 32px;
-    padding-bottom: 8px;
+  color: var(--title-text-color);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  padding-top: 32px;
+  padding-bottom: 8px;
 }
 
 .progect-link .text {
-    color: var(--primary-text-color);
-    font-size: 16px;
-    line-height: 1.2;
-    padding-bottom: 32px;
+  color: var(--primary-text-color);
+  font-size: 16px;
+  line-height: 1.2;
+  padding-bottom: 32px;
 }

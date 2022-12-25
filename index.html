@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="Effective Solutions for Your Business" />
-    <title>WEBSTUDIO</title>
+    <title>WEBSTUDIO-Lebedieva-3HW</title>
     <!-- file Normilize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
    <!-- file fonts -->
@@ -17,18 +17,18 @@
   <body class="body">
     <!-- Header Section -->
     <header class="header">
-      <div class="container">
-      <a class="logo link" href="./index.html"> <span class="accent-logo">WEB</span>STUDIO</a>
-      <nav>
+      <div class="header-section container">
+      <nav class="nav-section">
+        <a class="logo link" href="./index.html"> <span class="accent-logo">WEB</span>STUDIO</a>
         <ul class="site-nav list">
           <li><a class="link-nav link current" href="./index.html">Studio</a></li>
-          <li><a class="link-nav link current" href="./portfolio.html">Portfolio</a></li>
-          <li><a class="link-nav link current" href="#">Contacts</a></li>
+          <li><a class="link-nav link" href="./portfolio.html">Portfolio</a></li>
+          <li><a class="link-nav link" href="#">Contacts</a></li>
         </ul>
       </nav>
       <ul class="contact-nav list">
-        <li><a class="link-contact link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
         <li><a class="link-contact link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+        <li><a class="link-contact link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
       </ul>
       </div>
     </header>
@@ -41,29 +41,29 @@
         </div>
     </section>
     <!-- Benefits section -->
-    <section class="section-benefit"> 
+    <section class="benefit-section"> 
       <div class="container">
-        <h2 class="title-benefit">Benefits</h2> 
+        <h2 class="visually-hidden">Benefits</h2> 
         <ul class="benefit-list list">
-          <li>
+          <li class="benefit-item">
             <h3 class="title">Strategy</h3>
             <p class="text">
               Our goal is to identify the business problem to walk away with the perfect and creative solution. 
             </p>
           </li>
-          <li>
+          <li class="benefit-item">
             <h3 class="title">Punctuality</h3>
             <p class="text">
               Bring the key message to the brand's audience for the best price within the shortest possible time.
             </p>
           </li>
-          <li>
+          <li class="benefit-item">
             <h3 class="title">Diligence</h3>
             <p class="text">
               Research and confirm brands that present the strongest digital growth opportunities and minimize risk.
             </p>
           </li>
-          <li>
+          <li class="benefit-item">
             <h3 class="title">Technologies</h3>
             <p class="text">
               Design practice focused on digital experiences. We bring forth a deep passion for problem-solving.
@@ -73,11 +73,11 @@
         </div>
     </section>
     <!-- What are we doing section -->
-    <section class="section-wwd">
+    <section class="section">
       <div class="container">
         <h2 class="title-wwd">What are we doing</h2>
         <ul class="wwd-list list">
-          <li>
+          <li class="wwd-item">
             <img
               src="./Images/whatwedo/box1.jpg"
               alt="analityka"
@@ -85,7 +85,7 @@
               height="300"
             />
           </li>
-          <li>
+          <li class="wwd-item">
             <img
               src="./Images/whatwedo/box2.jpg"
               alt="work with application"
@@ -93,7 +93,7 @@
               height="300"
             />
           </li>
-          <li>
+          <li class="wwd-item">
             <img
               src="./Images/whatwedo/box3.jpg"
               alt="Adapting Technologies"
@@ -105,49 +105,57 @@
         </div>
     </section>
     <!-- Team Section -->
-      <section class="section-team">
+      <section class="section-team section">
          <div class="container">
         <h2 class="title-team">Our Team</h2>
         <ul class="team-list list">
-          <li>
+          <li class="team-item">
             <img
               src="./Images/team/team-1.jpg"
               alt="Product Designer"
               width="264"
               height="260"
             />
+            <div class="team-description">
             <h3 class="title">Mark Guerrero</h3>
             <p class="text">Product Designer</p>
+          </div>
           </li>
-          <li>
+          <li class="team-item">
             <img
               src="./Images/team/team-2.jpg"
               alt="Frontend Developer"
               width="264"
               height="260"
             />
+            <div class="team-description">
             <h3 class="title">Tom Ford</h3>
             <p class="text">Frontend Developer</p>
+          </div>
           </li>
-          <li>
+          <li class="team-item">
             <img
               src="./Images/team/team-3.jpg"
               alt="Marketing Specialist"
               width="264"
               height="260"
             />
+            <div class="team-description">
             <h3 class="title">Camila Garcia</h3>
             <p class="text">Marketing</p>
+            </div>
           </li>
-          <li>
+          <li class="team-item">
             <img
               src="./Images/team/team-4.jpg"
               alt="UI Designer"
               width="264"
               height="260"
             />
+            <div class="team-description">
             <h3 class="title">Daniel Wilson</h3>
             <p class="text">UI Designer</p>
+            </div>
           </li>
         </ul>
       </section>
