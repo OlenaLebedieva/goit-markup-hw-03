@@ -27,7 +27,7 @@ ul {
 
 img {
   display: block;
-  max-width: 100%;
+width: 100%;
 }
 
 /* ==General box-container for all section== */
@@ -209,13 +209,15 @@ margin-right: 40px;
 
 .benefit-list {
   display: flex;
-  margin-left: -24px;
 }
 
 .benefit-list > .benefit-item {
-  flex-basis: calc(100%/4 - 24px);
-  margin-left: 24px;
+  flex-basis: calc(100%/4);
 }
+
+.benefit-item:not(:first-child) {
+  margin-left: 24px;
+  }
 
 .benefit-list .title {
   color: var(--title-text-color);
@@ -238,36 +240,46 @@ margin-bottom: 8px;
   line-height: 1.11;
   text-align: center;
   text-transform: capitalize;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 .wwd-list {
   display: flex;
-  margin-left: -24px;
 }
 
-.wwd-item {
+.wwd-list > .wwd-item {
+  flex-basis: calc(100%/3)
+}
+
+.wwd-item:not(:first-child) {
 margin-left: 24px;
 }
 
-/* Team Section */
+/* ==Team Section== */
 .section-team {
   background-color: var(--accent-section-color);
 }
 
 .team-list {
   display: flex;
-  margin-left: -24px;
+}
+
+.team-list > .team-item {
+  flex-basis: calc(100%/4)
+}
+
+.team-item:not(:first-child) {
+margin-left: 24px;
 }
 
 .team-item {
-  margin-left: 24px;
-  flex-basis: calc(100%/4 - 24px);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
 }
 
 .team-description {
   background-color: rgb(255, 255, 255);
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .team-list .title {
@@ -275,8 +287,7 @@ margin-left: 24px;
   font-size: 20px;
   line-height: 1.2;
   text-align: center;
-  padding-top: 32px;
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 
@@ -284,7 +295,6 @@ margin-left: 24px;
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
-  padding-bottom: 32px;
 }
 
 /*=== Footer=== */
@@ -298,7 +308,7 @@ margin-left: 24px;
   font-size: 16px;
   line-height: 1.5;
   max-width: 264px;
-  padding-top: 16px;
+  margin-top: 16px;
 }
 
 .footer-section .logo {
@@ -320,12 +330,11 @@ margin-left: 24px;
 
 .filters-list {
   display: flex;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
   justify-content: center;
-  margin-left: -24px;
 }
 
-.filters-item {
+.filters-item:not(:first-child) {
   margin-left: 24px;
 }
 
@@ -358,17 +367,19 @@ margin-left: 24px;
 .progect-list{
   display: flex;
   flex-wrap: wrap;
-  margin-left: -24px;
   margin-bottom: -48px;
+  margin-left: -24px;
 }
 
 .progect-item {
-  margin-left: 24px;
   margin-bottom: 48px;
+  margin-left: 24px;
   flex-basis: calc(100%/3 - 24px);
   border: 0.5px solid;
   border-color: var(--accent-text-color);
-box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
+  0px 1px 1px rgba(46, 47, 66, 0.16),
+   0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .progect-description {
